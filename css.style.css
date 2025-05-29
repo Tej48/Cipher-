@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #00bfa5; /* bright teal */
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 0 0 6px #00bfa5aa;
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 191, 165, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.box {
+    background-color: #272727;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0, 191, 165, 0.3);
+    padding: 30px 25px;
+    flex: 1 1 360px;
+    max-width: 420px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: default;
+    color: #ccc;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 191, 165, 0.6);
+}
+
+.box .heading {
+    margin-bottom: 18px;
+}
+
+.box h2 {
+    color: #00bfa5;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #00bfa5;
+    padding-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.row, .column {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #004d40;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #e0e0e0;
+    background-color: #121212;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: #00bfa5;
+    box-shadow: 0 0 8px #00bfa5aa;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+#submit {
+    background: linear-gradient(135deg, #00bfa5, #ff7043);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(255, 112, 67, 0.7);
+}
+
+#submit:hover {
+    background: linear-gradient(135deg, #008e76, #ff5722);
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.9);
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: #00bfa5;
+    width: 18px;
+    height: 18px;
+}
+
+input[type="radio"]:checked + label {
+    color: #00bfa5;
+    font-weight: 600;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+#status {
+    color: #789262;
+    font-style: italic;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: 3px;
+    }
+
+    #main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 12px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    #submit {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
